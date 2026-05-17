@@ -18,13 +18,13 @@ This repository demonstrates that workflow using Monte Carlo methods. It is rele
 
 ## Contents
 
-- `monte_carlo_methods.py`: rejection Monte Carlo integration and hypersphere-volume estimation.
-- `metropolis_quantum_box.py`: Metropolis Monte Carlo sampling of a quantized ideal gas in a cubic box.
-- `run_all.py`: regenerates all figures.
-- `THEORY.md`: detailed theoretical background.
-- `RESULTS_ANALYSIS.md`: detailed interpretation of the figures and numerical behaviour.
+- `src/monte_carlo_methods.py`: rejection Monte Carlo integration and hypersphere-volume estimation.
+- `src/metropolis_quantum_box.py`: Metropolis Monte Carlo sampling of a quantized ideal gas in a cubic box.
+- `src/run_all.py`: regenerates all figures into `figures/`.
+- `docs/theory.md`: detailed theoretical background.
+- `docs/results_analysis.md`: detailed interpretation of the figures and numerical behaviour.
 - `requirements.txt`: minimal Python dependencies.
-- `raw_course_*.py` and `raw_course_report_*.pdf`: original coursework material kept for provenance. For a clean repository layout, these can be moved into a `raw/` folder.
+- `raw/raw_course_*.py` and `raw/raw_course_report_*.pdf`: original coursework material kept for provenance.
 
 ## Methods implemented
 
@@ -42,27 +42,28 @@ The third part simulates particles in a 3D cubic quantum box. Each particle is r
 
 ## Generated figures
 
-- `figure_mc_integral_convergence.png`
-- `figure_mc_error_scaling.png`
-- `figure_mc_ymax_sensitivity.png`
-- `figure_mc_accept_reject.png`
-- `figure_hypersphere_volume_by_dimension.png`
-- `figure_hypersphere_relative_error.png`
-- `figure_metropolis_energy_base.png`
-- `figure_metropolis_temperature_dependence.png`
-- `figure_metropolis_particle_number_dependence.png`
-- `figure_metropolis_box_length_dependence.png`
+- `figures/figure_mc_integral_convergence.png`
+- `figures/figure_mc_error_scaling.png`
+- `figures/figure_mc_ymax_sensitivity.png`
+- `figures/figure_mc_accept_reject.png`
+- `figures/figure_hypersphere_volume_by_dimension.png`
+- `figures/figure_hypersphere_relative_error.png`
+- `figures/figure_metropolis_energy_base.png`
+- `figures/figure_metropolis_temperature_dependence.png`
+- `figures/figure_metropolis_particle_number_dependence.png`
+- `figures/figure_metropolis_box_length_dependence.png`
 
-## How to run
+## Installation and figure regeneration
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
+python -m pip install --upgrade pip
 pip install -r requirements.txt
-python run_all.py
+python src/run_all.py
 ```
 
-The scripts regenerate the figures in the current directory.
+This command regenerates all figures into `figures/` from the repository root.
 
 ## Skills demonstrated
 
